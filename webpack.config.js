@@ -5,14 +5,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: "development",
-  entry: "./script.js",
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+      { test: /\.js?$/, exclude: /node_modules/, loader: "babel-loader" }
     ]
   },
   plugins: [
